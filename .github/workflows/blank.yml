@@ -23,5 +23,4 @@ on:
 
       - name: Run a multi-line script
         run: |
-          echo Directory Listing
-	  echo `ls -al`
+          echo "Directory Listing"
