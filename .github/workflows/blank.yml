@@ -21,3 +21,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "Directory Listing"
+          ls -al
+          echo `ls -al`
