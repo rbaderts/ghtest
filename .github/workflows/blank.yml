@@ -4,15 +4,11 @@ name: CI
 
 # Controls when the workflow will run
 on:
-
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
-  workflow_dispatch:
-
-  build:
+  jobs:
     runs-on: ubuntu-latest
 
     steps:
