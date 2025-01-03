@@ -9,14 +9,15 @@ on:
       - main
 
 jobs:
-  runs-on: ubuntu-latest
+  release: 
+    runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Run a one-line script
-      run: build.sh
+      - name: Run a one-line script
+        run: build.sh
 
-    - name: Run a multi-line script
-      run: |
-        echo "Directory Listing"
+      - name: Run a multi-line script
+        run: |
+          echo "Directory Listing"
