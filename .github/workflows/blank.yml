@@ -24,8 +24,9 @@ jobs:
           ls -al
           echo `ls -al`
 
-      - uses: actions-ecosystem/action-get-latest-tag@v1
-        id: version
+      - name: version
+        uses: actions-ecosystem/action-get-latest-tag@v1
+        id: get_version
 
       - name: release
         uses: actions/create-release@v1
@@ -33,7 +34,7 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: {{ steps.versiong.outputs.tag }}
+          release_name: ${{ steps.get_version.outputs.tag }}
           tag_name: ${{ github.ref }}
           body_path: CHANGELOG.md
         env:
